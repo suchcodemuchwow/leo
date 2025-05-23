@@ -8,106 +8,100 @@ header {
     background: rgba(0, 8, 81, 0.8);
     border: 1px solid transparent;
     border-radius: 0;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+  
     .input-group {
-      float: right;
       width: 200px;
-      margin: 0.7rem 0 0;
-
+  
       @media (max-width: 720px) {
         width: 150px;
-      }      
-
+      }
+  
       input {
         height: 25px;
         font-size: 0.8rem;
       }
-
-      .bi {
-        color: #fff;
-      }
-
-      .search-link {
-        color: #111111;
-        text-decoration: none;
-      }
     }
-
+  
     nav {
-      position: relative;
-      float: right;
-      margin: 0.5rem 1rem 0;
-
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  
       a {
         display: inline-block;
         margin: 0 0.2rem 0;
-
+  
         &.nav-fav {
           font-size: 0.8rem;
-          color: #ccc;          
+          color: #ccc;
           text-decoration: none;
-
+  
           &:hover {
             color: #fff;
           }
         }
       }
     }
-
-    i {
+  
+    svg {
       margin: 0.5rem;
-      font-size: 1.2rem;
       color: #fff;
-    
+  
       &:hover {
         color: #fff;
       }
-
+  
       + .star-number {
         position: absolute;
         top: 1rem;
-        right: 6.1rem;
+        right: 8rem;
         padding: 0.5rem 0.3rem;
         font-size: 0.65rem;
         font-weight: 600;
         color: #fff;
         background: red;
         border-radius: 50%;
-      }     
-      
+      }
+  
       &.bi-film {
         float: left;
         margin-left: 1.5rem;
+        margin-top: 0.8rem;
         font-size: 1.3rem;
         color: #e9ecef;
       }
-
-      &.bi-search {
-
+  
+      &.bi-star,
+      &.bi-star-fill {
+        margin-top: 0.3rem;
       }
-
+  
       &.bi-star-fill,
-      &.bi-heart-fill{
-        color: #e50914;
-        animation: blink .4s;
-
+      &.bi-heart-fill {
+        color: #d3e509;
+        animation: blink 0.4s;
+  
         &.bi-star-fill-white,
         &.bi-heart-fill-white {
           color: #fff;
         }
       }
-
-      @keyframes blink{
+  
+      @keyframes blink {
         50% {
           color: red;
         }
-      }  
+      }
     }
-
+  
     .selected {
       i {
         color: #fff;
       }
-    }    
-    
+    }
   }
+  
